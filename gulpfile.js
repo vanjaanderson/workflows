@@ -1,10 +1,11 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
+var gulp = require('gulp'),
+	gutil = require('gulp-util'),
+	coffee = require('gulp-coffee'),
+	coffeeSources = ['components/coffee/*.coffee'];
 
-gulp.task('log', function() {
-	gutil.log('Workflows are awesome');
+gulp.task('coffee', function() {
+	gulp.src('components/coffee/tagline.coffee')
+		.pipe(coffee({bare: true}) // Compiles Javascript
+			.on('error', gutil.log))
+		.pipe(gulp.dest('components/scripts'))
 });
-
-/*gulp.task("default", function () {
-  gulp.start("serve");
-});*/
