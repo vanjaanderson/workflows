@@ -1,3 +1,6 @@
+// Different gulp tasks
+// https://github.com/gulpjs/gulp/blob/master/docs/API.md
+
 var gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	coffee = require('gulp-coffee'),
@@ -39,3 +42,5 @@ gulp.task('compass', function() {
 		.on('error', gutil.log)
 		.pipe(gulp.dest('builds/development/css'))
 });
+
+gulp.task('default', ['coffee', 'js', 'compass']);
