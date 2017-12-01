@@ -18,5 +18,8 @@
     "jquery": "^3.2.1",
     "minimatch": "^3.0.2",
     "mustache": "^2.3.0"
+  },
+  "dependencies": {
+    "gulp-connect": "^5.0.0"
   }
 }
